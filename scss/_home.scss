@@ -1,0 +1,60 @@
+.container{
+  background-color: #16161A;
+  padding-bottom: $max-height;
+  
+  .header-container{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    height: $max-height;
+    background-color:#232E35;
+   
+    .menu{
+      @include containerFlex(space-between,center,nowrap);
+
+      a{
+        color: $text-color;
+        text-decoration: none;
+      }
+
+      figure{
+        text-align: center;
+        margin: 1rem 1.5rem;
+      }
+    }
+  }
+
+  h1{
+    font-size: 1rem;
+    color: $text-color;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+
+  .container-link-juego{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+
+    .link-juego{
+      color: $text-color;
+      text-decoration: none;
+      padding: 5rem;
+      
+      figure{
+        text-align: center;
+        margin: 2rem 0;
+        
+
+        &:nth-of-type(1){
+          grid-column: -1/1;
+        }
+      }
+      
+    }
+  }
+}

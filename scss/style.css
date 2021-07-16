@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2? family = Baloo + Tammudu + 2: wght @ 400; 700 & display = swap");
+/* Global */
+/* Reset */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.6;
+  font-family: 'Baloo Tammudu 2', cursive,sans-serif;
+}
+
+.inicio {
+  background-color: #000;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.inicio figure {
+  margin: 2.5rem 0;
+}
+
+.inicio h1 {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.inicio .btn-google {
+  background-color: #ef4565;
+  color: #fff;
+  padding: .7rem 0;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.inicio .form-email {
+  max-width: 300px;
+  width: 100%;
+}
+
+.inicio .form-email #email-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.inicio .form-email #email-label #email {
+  font-size: 1.2rem;
+  padding: .7rem 0;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+}
+
+.inicio a {
+  color: #2CB67D;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.inicio p {
+  color: #fff;
+}
+
+.container {
+  background-color: #16161A;
+  padding-bottom: 5rem;
+}
+
+.container .header-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  height: 5rem;
+  background-color: #232E35;
+}
+
+.container .header-container .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.container .header-container .menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container .header-container .menu figure {
+  text-align: center;
+  margin: 1rem 1.5rem;
+}
+
+.container h1 {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.container .container-link-juego {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .container-link-juego .link-juego {
+  color: #fff;
+  text-decoration: none;
+  padding: 5rem;
+}
+
+.container .container-link-juego .link-juego figure {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.container .container-link-juego .link-juego figure:nth-of-type(1) {
+  grid-column: -1/1;
+}
+
+.container-juego {
+  background-color: #16161A;
+  height: 100vh;
+}
+
+.container-juego .progress-bar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .5rem 0;
+}
+
+.container-juego .progress-bar .btn-close {
+  padding: 0.3rem .5rem;
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.container-juego .progress-bar progress {
+  width: 70%;
+  margin-left: 1rem;
+}
+
+.container-juego .progress-bar img {
+  margin-left: 1rem;
+}
+
+.container-juego .progress-bar span {
+  color: #fff;
+}
+
+.container-juego .pregunta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 85%;
+  margin: auto;
+}
+
+.container-juego .pregunta p {
+  margin-left: 1rem;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.container-juego .respuesta {
+  margin-top: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-juego .respuesta form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+  width: 100%;
+}
+
+.container-juego .respuesta form label {
+  margin: 0 1rem 1rem 1rem;
+  padding: .5rem;
+  border: 1px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #232E35;
+}
+
+.container-juego .respuesta .btn-comprobar {
+  width: 90%;
+  background-color: #D4CAF3;
+  color: #fff;
+  padding: 1rem 0;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 3rem;
+}
+/*# sourceMappingURL=style.css.map */

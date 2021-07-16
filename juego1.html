@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Bits</title>
+  <link rel="stylesheet" href="scss/style.css">
+</head>
+<body>
+  <div class="container-juego">
+    <div class="progress-bar">
+      <button class="btn-close">x</button>
+      <progress value="90" min="0" max="100"></progress>
+      <img src="/assets/corazon.png" alt="">
+      <span>4</span>
+    </div>
+    <div class="pregunta">
+        <figure>
+          <img src="assets/caracters.png" alt="">
+        </figure>
+        <p>¿Qué etiqueta es semánticamente correcta para el contenido principal?</p>
+    </div>
+    <div class="respuesta">
+      <form action="">
+        <label for="main">Main   
+          <input type="radio" name="html" id="main" value="main">
+        </label>
+        <label for="section">Section
+          <input type="radio" name="html" id="section" value="section">
+        </label>
+        <label for="header">Header
+          <input type="radio" name="html" id="header" value="header">
+        </label>
+      </form>
+      <button class="btn-comprobar">COMPROBAR</button>
+    </div>  
+  </div>
+</body>
+</html>
