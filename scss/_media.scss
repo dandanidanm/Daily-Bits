@@ -1,0 +1,25 @@
+@media screen and (min-width:500px) {
+  /* HOME */
+  .home-container{
+    margin: auto;
+    max-width: 360px;
+  
+    .header-container{
+      max-width: 360px;
+      margin: auto;
+      
+    }
+  }
+
+  /* JUEGO-1 */
+  .container-juego{
+    margin: auto;
+    max-width: 360px;
+
+  }
+}  
+
+@media screen and (min-width:960px) {
+  
+}  
+

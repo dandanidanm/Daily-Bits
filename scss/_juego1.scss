@@ -27,7 +27,7 @@
       color: $text-color;
     }
   }
-  .pregunta{
+  .pregunta-juego1{
     display: flex;
     align-items: center;
     width: 85%;
@@ -39,8 +39,8 @@
       font-size: 1.4rem;
     }
   }
-  .respuesta{
-    margin-top: 8rem;
+  .respuesta-juego1{
+    margin-top: 6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;

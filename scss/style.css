@@ -100,12 +100,12 @@ body {
   color: #fff;
 }
 
-.container {
+.home-container {
   background-color: #16161A;
-  padding-bottom: 5rem;
+  height: 100%;
 }
 
-.container .header-container {
+.home-container .header-container {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -115,7 +115,7 @@ body {
   background-color: #232E35;
 }
 
-.container .header-container .menu {
+.home-container .header-container .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,24 +129,24 @@ body {
       flex-wrap: nowrap;
 }
 
-.container .header-container .menu a {
+.home-container .header-container .menu a {
   color: #fff;
   text-decoration: none;
 }
 
-.container .header-container .menu figure {
+.home-container .header-container .menu .fig-menu {
   text-align: center;
   margin: 1rem 1.5rem;
 }
 
-.container h1 {
+.home-container h1 {
   font-size: 1rem;
   color: #fff;
   text-align: center;
   padding: 1rem 2rem;
 }
 
-.container .container-link-juego {
+.home-container .container-link-juego {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -161,19 +161,27 @@ body {
           align-items: center;
 }
 
-.container .container-link-juego .link-juego {
+.home-container .container-link-juego .link-juego {
   color: #fff;
   text-decoration: none;
-  padding: 5rem;
+  pointer-events: none;
 }
 
-.container .container-link-juego .link-juego figure {
+.home-container .container-link-juego .link-juego:nth-of-type(1) {
+  grid-column: -1/1;
+}
+
+.home-container .container-link-juego .link-juego .fig-home {
   text-align: center;
   margin: 2rem 0;
 }
 
-.container .container-link-juego .link-juego figure:nth-of-type(1) {
-  grid-column: -1/1;
+.home-container .container-link-juego .link-juego .fig-home img {
+  pointer-events: visible;
+}
+
+.home-container .container-link-juego .link-juego .fig-home figcaption {
+  pointer-events: visible;
 }
 
 .container-juego {
@@ -216,7 +224,7 @@ body {
   color: #fff;
 }
 
-.container-juego .pregunta {
+.container-juego .pregunta-juego1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -227,14 +235,14 @@ body {
   margin: auto;
 }
 
-.container-juego .pregunta p {
+.container-juego .pregunta-juego1 p {
   margin-left: 1rem;
   color: #fff;
   font-size: 1.4rem;
 }
 
-.container-juego .respuesta {
-  margin-top: 8rem;
+.container-juego .respuesta-juego1 {
+  margin-top: 6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -250,7 +258,7 @@ body {
           align-items: center;
 }
 
-.container-juego .respuesta form {
+.container-juego .respuesta-juego1 form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -262,7 +270,7 @@ body {
   width: 100%;
 }
 
-.container-juego .respuesta form label {
+.container-juego .respuesta-juego1 form label {
   margin: 0 1rem 1rem 1rem;
   padding: .5rem;
   border: 1px solid #fff;
@@ -278,7 +286,7 @@ body {
   background-color: #232E35;
 }
 
-.container-juego .respuesta .btn-comprobar {
+.container-juego .respuesta-juego1 .btn-comprobar {
   width: 90%;
   background-color: #D4CAF3;
   color: #fff;
@@ -286,5 +294,151 @@ body {
   border-radius: 20px;
   margin: auto;
   margin-top: 3rem;
+}
+
+.container-juego .pregunta-juego2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 85%;
+  margin: auto;
+}
+
+.container-juego .pregunta-juego2 p {
+  margin-left: 1rem;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.container-juego .respuesta-juego2 {
+  margin-top: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-juego .respuesta-juego2 .solucion {
+  margin: auto;
+  width: 90%;
+  height: 180px;
+  margin-top: -2rem;
+}
+
+.container-juego .respuesta-juego2 .solucion hr {
+  margin: auto;
+  width: 100%;
+}
+
+.container-juego .respuesta-juego2 .opciones input {
+  color: #ef4565;
+  background-color: transparent;
+  padding: .5rem;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  margin: .5rem;
+}
+
+.container-juego .respuesta-juego2 .btn-comprobar {
+  width: 90%;
+  background-color: #D4CAF3;
+  color: #fff;
+  padding: 1rem 0;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+.container-juego .pregunta-juego3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 85%;
+  margin: auto;
+}
+
+.container-juego .pregunta-juego3 p {
+  margin-left: 1rem;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.container-juego .respuesta-juego3 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: 160px 160px 100px;
+      grid-template-rows: 160px 160px 100px;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+  grid-row-gap: 1rem;
+}
+
+.container-juego .respuesta-juego3 label {
+  border: 2px solid gray;
+  border-radius: 15px;
+  height: 100%;
+  width: 80%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-juego .respuesta-juego3 .btn-comprobar {
+  width: 90%;
+  background-color: #D4CAF3;
+  color: #fff;
+  padding: 1rem 0;
+  border-radius: 20px;
+  margin: auto;
+  grid-column: -1/1;
+}
+
+@media screen and (min-width: 500px) {
+  /* HOME */
+  .home-container {
+    margin: auto;
+    max-width: 360px;
+  }
+  .home-container .header-container {
+    max-width: 360px;
+    margin: auto;
+  }
+  /* JUEGO-1 */
+  .container-juego {
+    margin: auto;
+    max-width: 360px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

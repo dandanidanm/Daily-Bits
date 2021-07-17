@@ -1,7 +1,6 @@
-.container{
+.home-container{
   background-color: #16161A;
-  padding-bottom: $max-height;
-  
+  height: 100%;
   .header-container{
     position: fixed;
     bottom: 0;
@@ -17,9 +16,10 @@
       a{
         color: $text-color;
         text-decoration: none;
+        
       }
 
-      figure{
+      .fig-menu{
         text-align: center;
         margin: 1rem 1.5rem;
       }
@@ -43,16 +43,23 @@
     .link-juego{
       color: $text-color;
       text-decoration: none;
-      padding: 5rem;
+      pointer-events: none;
       
-      figure{
+      &:nth-of-type(1){
+        grid-column: -1/1;
+      }
+
+      .fig-home{
         text-align: center;
         margin: 2rem 0;
-        
 
-        &:nth-of-type(1){
-          grid-column: -1/1;
+        img{
+          pointer-events: visible;
         }
+        figcaption{
+          pointer-events: visible;
+        }
+       
       }
       
     }

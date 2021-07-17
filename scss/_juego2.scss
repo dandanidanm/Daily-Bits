@@ -1,0 +1,54 @@
+.container-juego{
+  
+  .pregunta-juego2{
+    display: flex;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+    
+    p{
+      margin-left: 1rem;
+      color: $text-color;
+      font-size: 1.4rem;
+    }
+  }
+  .respuesta-juego2{
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .solucion{
+      margin: auto;
+      width: 90%;
+      height: 180px;
+      margin-top: -2rem;
+      hr{
+        margin: auto;
+        width: 100%;
+      }
+    }
+    .opciones{
+      
+      input{
+        color: #ef4565;
+        background-color: transparent;
+        padding: .5rem;
+        border: 2px solid #fff;
+        border-radius: 15px;
+        font-size: 1.1rem;
+        margin: .5rem;
+      }
+    }
+    .btn-comprobar{
+      width: 90%;
+      background-color:#D4CAF3;
+      color: $text-color;
+      padding: 1rem 0;
+      border-radius: 20px;
+      margin: auto;
+      margin-top: 3rem;
+    }
+  }  
+}
