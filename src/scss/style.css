@@ -187,6 +187,10 @@ body {
 .container-juego {
   background-color: #16161A;
   height: 100vh;
+  position: relative;
+  /* modal para comprobar si esta bien o mal */
+  /* display none */
+  /* clases para el modal */
 }
 
 .container-juego .progress-bar {
@@ -224,7 +228,18 @@ body {
   color: #fff;
 }
 
-.container-juego .pregunta-juego1 {
+.container-juego .container-pregunta1 {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-juego .container-pregunta1 .pregunta-juego1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,14 +250,14 @@ body {
   margin: auto;
 }
 
-.container-juego .pregunta-juego1 p {
+.container-juego .container-pregunta1 .pregunta-juego1 p {
   margin-left: 1rem;
   color: #fff;
   font-size: 1.4rem;
 }
 
-.container-juego .respuesta-juego1 {
-  margin-top: 6rem;
+.container-juego .container-pregunta1 .respuesta-juego1 {
+  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -258,7 +273,7 @@ body {
           align-items: center;
 }
 
-.container-juego .respuesta-juego1 form {
+.container-juego .container-pregunta1 .respuesta-juego1 form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -267,11 +282,10 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #fff;
-  width: 100%;
+  width: 360px;
 }
 
-.container-juego .respuesta-juego1 form label {
-  margin: 0 1rem 1rem 1rem;
+.container-juego .container-pregunta1 .respuesta-juego1 form label {
   padding: .5rem;
   border: 1px solid #fff;
   display: -webkit-box;
@@ -284,9 +298,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: #232E35;
+  width: 90%;
+  margin: auto;
+  margin-top: 1rem;
 }
 
-.container-juego .respuesta-juego1 .btn-comprobar {
+.container-juego .container-pregunta1 .btn-comprobar {
   width: 90%;
   background-color: #D4CAF3;
   color: #fff;
@@ -294,6 +311,274 @@ body {
   border-radius: 20px;
   margin: auto;
   margin-top: 3rem;
+}
+
+.container-juego .container-pregunta2 {
+  /* ********************** */
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-juego .container-pregunta2 .pregunta-juego1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 85%;
+  margin: auto;
+}
+
+.container-juego .container-pregunta2 .pregunta-juego1 p {
+  margin-left: 1rem;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.container-juego .container-pregunta2 .respuesta-juego1 {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-juego .container-pregunta2 .respuesta-juego1 form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+  width: 360px;
+}
+
+.container-juego .container-pregunta2 .respuesta-juego1 form label {
+  padding: .5rem;
+  border: 1px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #232E35;
+  width: 90%;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.container-juego .container-pregunta2 .btn-comprobar {
+  width: 90%;
+  background-color: #D4CAF3;
+  color: #fff;
+  padding: 1rem 0;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+.container-juego .container-pregunta3 {
+  /* *********************** */
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-juego .container-pregunta3 .pregunta-juego1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 85%;
+  margin: auto;
+}
+
+.container-juego .container-pregunta3 .pregunta-juego1 p {
+  margin-left: 1rem;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.container-juego .container-pregunta3 .respuesta-juego1 {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-juego .container-pregunta3 .respuesta-juego1 form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+  width: 360px;
+}
+
+.container-juego .container-pregunta3 .respuesta-juego1 form label {
+  padding: .5rem;
+  border: 1px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #232E35;
+  width: 90%;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.container-juego .container-pregunta3 .btn-comprobar {
+  width: 90%;
+  background-color: #D4CAF3;
+  color: #fff;
+  padding: 1rem 0;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+.container-juego .modal-verde {
+  opacity: 0;
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ACFFCF;
+  position: absolute;
+  width: 100%;
+  top: 70%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.container-juego .modal-verde p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.container-juego .modal-verde a {
+  background-color: #2CB67D;
+  padding: 1rem 0;
+  border-radius: 20px;
+  margin: auto;
+  width: 90%;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.container-juego .modal-rojo {
+  opacity: 0;
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F9CFD7;
+  position: absolute;
+  width: 100%;
+  top: 70%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.container-juego .modal-rojo p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #EF4565;
+}
+
+.container-juego .modal-rojo a {
+  background-color: #EF4565;
+  padding: 1rem 0;
+  border-radius: 20px;
+  margin: auto;
+  width: 90%;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.container-juego .display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container-juego .opacity {
+  opacity: 1;
+  pointer-events: visible;
 }
 
 .container-juego .pregunta-juego2 {

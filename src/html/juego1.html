@@ -17,26 +17,101 @@
       <img src="../assets/corazon.png" alt="">
       <span>4</span>
     </div>
-    <div class="pregunta-juego1">
-        <figure>
-          <img src="../assets/caracters.png" alt="">
-        </figure>
-        <p>¿Qué etiqueta es semánticamente correcta para el contenido principal?</p>
+    <!-- Pregunta uno -->
+    <div class="container-pregunta1 display" id="container-p1">
+      <div class="pregunta-juego1">
+          <figure>
+            <img src="../assets/caracters.png" alt="">
+          </figure>
+          <p>¿Qué etiqueta es semánticamente correcta para el contenido principal?</p>
+      </div>
+      <div class="respuesta-juego1">
+        <form action="" id="form">
+          <label for="main">Main   
+            <input class="radio-juego"  type="radio" name="html" id="main" value="main">
+          </label>
+          <label for="section">Section
+            <input class="radio-juego" type="radio" name="html" id="section" value="section">
+          </label>
+          <label for="header">Header
+            <input class="radio-juego" type="radio" name="html" id="header" value="header">
+          </label>
+          <button value="" id="btn-juego1"class="btn-comprobar" >COMPROBAR</button>
+        </form>
+      </div>  
     </div>
-    <div class="respuesta-juego1">
-      <form action="">
-        <label for="main">Main   
-          <input type="radio" name="html" id="main" value="main">
-        </label>
-        <label for="section">Section
-          <input type="radio" name="html" id="section" value="section">
-        </label>
-        <label for="header">Header
-          <input type="radio" name="html" id="header" value="header">
-        </label>
-      </form>
-      <button class="btn-comprobar">COMPROBAR</button>
-    </div>  
+    <div class="modal-verde">
+      <p>¡¡Buen Trabajo!!</p>
+      <a href="#" id="btn-verde">CONTINUAR</a>
+    </div>
+    <div class="modal-rojo">
+      <p>Respuesta Incorrecta</p>
+      <a href="#" id="btn-rojo">CONTINUAR</a>
+    </div>
+    <!-- Pregunta dos -->
+    <div class="container-pregunta2" id="container-p2">
+      <div class="pregunta-juego1">
+          <figure>
+            <img src="../assets/caracters2.png" alt="">
+          </figure>
+          <p>¿Qué etiqueta HTML nos sirve para incluir archivos de JavaScript?</p>
+      </div>
+      <div class="respuesta-juego1">
+        <form action="">
+          <label for="br">br  
+            <input class="radio-juego"  type="radio" name="html" id="br" value="br">
+          </label>
+          <label for="script">script
+            <input class="radio-juego" type="radio" name="html" id="script" value="script">
+          </label>
+          <label for="styles">styles
+            <input class="radio-juego" type="radio" name="html" id="styles" value="styles">
+          </label>
+        </form>
+      </div>  
+      <button class="btn-comprobar" id="btn-juego2">COMPROBAR</button>
+    </div>
+   <!--  <div class="modal-verde">
+      <p>¡¡Buen Trabajo!!</p>
+      <a href="#" class="btn-verde">CONTINUAR</a>
+    </div>
+    <div class="modal-rojo">
+      <p>la respuesta correcta es: </p>
+      <a href="#" class="btn-rojo">CONTINUAR</a>
+    </div> -->
+    <!-- Pregunta tres -->
+    <div class="container-pregunta3" id="container-p3">
+      <div class="pregunta-juego1">
+          <figure>
+            <img src="../assets/caracters3.png" alt="">
+          </figure>
+          <p>¿Qué significa DRY?</p>
+      </div>
+      <div class="respuesta-juego1">
+        <form action="">
+          <label for="Dont-repeat-yellow">Don’t repeat yellow   
+            <input class="radio-juego"  type="radio" name="html" id="Dont-repeat-yellow" value="Dont-repeat-yellow">
+          </label>
+          <label for="Dont-repeat-yourself">Don’t repeat yourself
+            <input class="radio-juego" type="radio" name="html" id="Dont-repeat-yourself" value="Dontrepeatyourself">
+          </label>
+          <label for="Dont-recicle-year">Don’t recicle year
+            <input class="radio-juego" type="radio" name="html" id="Dont-recicle-year" value="Dont-recicle-year">
+          </label>
+        </form>
+      </div>  
+      <button id="btn-juego3" class="btn-comprobar">COMPROBAR</button>
+    </div>
+    <!-- <div class="modal-verde">
+      <p>¡¡Buen Trabajo!!</p>
+      <a href="#" class="btn-verde">CONTINUAR</a>
+    </div>
+    <div class="modal-rojo">
+      <p>la respuesta correcta es: </p>
+      <a href="#" class="btn-rojo">CONTINUAR</a>
+    </div> -->
   </div>
+  <script type="module" src="../components/index.js"></script>
+
 </body>
 </html>
