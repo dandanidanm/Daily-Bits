@@ -1,4 +1,4 @@
-import { save } from "../commons/localStorage.js";
+import * as LocalStorage from "../commons/localStorage.js";
 
 //Obteniendo valor del boton radio
 const respuesta1 = document.querySelectorAll('.radio-juego');
@@ -24,12 +24,38 @@ const preguntaTres = document.getElementById('container-p3');
 //parrafo del modal con solucion
 const ok = document.getElementById('respuesta-ok');
 
+const vidas = document.querySelector('.vida');
+
+const restarVida = () => {
+  let vidaActual = parseInt(vidas.textContent);
+  if(vidaActual >= 1)
+    vidaActual --;
+
+  if(vidaActual <= 0) {
+    LocalStorage.limpiarStorage();
+    window.location.reload();
+  }
+
+  LocalStorage.guardarUserLife({
+    vida: vidaActual
+  });
+
+  vidas.innerHTML = `${vidaActual}`;
+};
+
+export const checkLocalData = () => {
+  let vidasDeUsuario = LocalStorage.traVidaUsuario();
+  if(!vidasDeUsuario.vida)
+    vidasDeUsuario.vida = 4;
+
+  vidas.innerHTML = `${vidasDeUsuario.vida}`;
+}
 
 //obteniendo comparacion del radio y la respuesta correcta
 export const res = () => {
   for(let i = 0; i < respuesta1.length; i++){
     respuesta1[i].addEventListener('click',()=>{
-       
+
       btnComprobar.value = respuesta1[i].value;
       btnComprobar.disabled = false;
 
@@ -39,39 +65,42 @@ export const res = () => {
       btnComprobar3.value = respuesta1[i].value;
       btnComprobar3.disabled = false;
     });
-
-    //igualando el boton comparar con el radio correcto
-    btnComprobar.addEventListener('click',(e)=>{
-      e.preventDefault();  
-      if(btnComprobar.value === 'main'){
-        modalGood.classList.add('opacity');
-        
-        save('respuesta',1000);
-      }else{
-        modalBad.classList.add('opacity');
-        ok.innerHTML = '<p style="color:#EF4565; margin:1rem;text-align:center;">La respuesta correcta es: Main </p>';
-      }
-    });
-    btnComprobar2.addEventListener('click',(e)=>{
-      e.preventDefault();   
-      if(btnComprobar2.value === 'script'){
-        modalGood.classList.add('opacity');
-      }else{
-        modalBad.classList.add('opacity');
-        ok.innerHTML = '<p style="color:#EF4565; margin:1rem;text-align:center;">La respuesta correcta es: Script </p>';
-      }
-    });
-    btnComprobar3.addEventListener('click',(e)=>{
-      e.preventDefault();   
-
-      if(btnComprobar3.value === 'Dontrepeatyourself'){
-        modalGood.classList.add('opacity');
-      }else{
-        modalBad.classList.add('opacity');
-        ok.innerHTML = '<p style="color:#EF4565; margin:1rem;text-align:center;">La respuesta correcta es: Dont repeat yourself</p>';
-      }
-    });
   }
+
+  //igualando el boton comparar con el radio correcto
+  btnComprobar.addEventListener('click',(e)=>{
+    e.preventDefault();
+    if(btnComprobar.value === 'main'){
+      modalGood.classList.add('opacity');
+    }else{
+      restarVida();
+      modalBad.classList.add('opacity');
+      ok.innerHTML = '<p style="color:#EF4565; margin:1rem;text-align:center;">La respuesta correcta es: Main </p>';
+    }
+  });
+
+  btnComprobar2.addEventListener('click',(e)=>{
+    e.preventDefault();
+    if(btnComprobar2.value === 'script'){
+      modalGood.classList.add('opacity');
+    }else{
+      restarVida();
+      modalBad.classList.add('opacity');
+      ok.innerHTML = '<p style="color:#EF4565; margin:1rem;text-align:center;">La respuesta correcta es: Script </p>';
+    }
+  });
+
+  btnComprobar3.addEventListener('click',(e)=>{
+    e.preventDefault();
+
+    if(btnComprobar3.value === 'Dontrepeatyourself'){
+      modalGood.classList.add('opacity');
+    }else{
+      restarVida();
+      modalBad.classList.add('opacity');
+      ok.innerHTML = '<p style="color:#EF4565; margin:1rem;text-align:center;">La respuesta correcta es: Dont repeat yourself</p>';
+    }
+  });
 }
 
 //boton para cerrando modal
@@ -79,9 +108,7 @@ export const closeModal = ()=>{
   btnRed.addEventListener('click',(e)=>{
     e.preventDefault();
     modalBad.classList.remove('opacity');
-    console.log(btnRed)
-    console.log('hola')
-    
+
     if(preguntaUno.classList[1] === 'display'){
       preguntaDos.classList.add('display');
       preguntaUno.classList.remove('display');
@@ -97,7 +124,7 @@ export const closeModal = ()=>{
 
   btnGreen.addEventListener('click',()=>{
     modalGood.classList.remove('opacity')
-    
+
     if(preguntaUno.classList[1] === 'display'){
       preguntaDos.classList.add('display');
       preguntaUno.classList.remove('display');

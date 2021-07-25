@@ -1,29 +1,45 @@
-
-export function save (name,item){
+function guardar (name,item){
   try {
-
-    if(typeof item !== "object" || !Array.isArray(item)){
-      throw new Error('Invalid item for save onlocalStorage')
+    if(typeof item === "object" || Array.isArray(item)){
+      window.localStorage.setItem(name,JSON.stringify(item))
+    } else {
+      throw new Error('Invalid item for save on local storage')
     }
-    
-    window.localStorage.setItem(name,JSON.stringify(item))
-
   } catch (error) {
     return {}
   }
 }
 
-
-export function get (name){
+function traer(name){
   try {
+    const localItem = window.localStorage.getItem(name)
+    const dataParse = JSON.parse(localItem);
 
-    if(typeof item !== "object" || !Array.isArray(item)){
-      throw new Error('Invalid item for save onlocalStorage')
-    }
-    
-    window.localStorage.setItem(name,JSON.stringify(item))
+    let defaultData = {};
 
+    if(dataParse)
+      defaultData = dataParse;
+
+    return defaultData;
   } catch (error) {
     return {}
   }
 }
+
+export function limpiarStorage(){
+  window.localStorage.clear();
+}
+
+export const guardarUserLife = item => guardar('@app/usuarioVida', item);
+export const guardarUserResponses = item => {
+  const respuestasUsuarios = traerRespuestaUsuario();
+
+  guardar('@app/usuarioRespuestas', {
+    ...respuestasUsuarios,
+    ...item,
+  });
+};
+
+export const traVidaUsuario = () => traer('@app/usuarioVida');
+export const traerRespuestaUsuario = () => traer('@app/usuarioRespuestas');
+

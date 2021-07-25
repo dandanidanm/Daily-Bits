@@ -15,14 +15,14 @@
       </a>
       <progress value="90" min="0" max="100"></progress>
       <img src="../assets/corazon.png" alt="">
-      <span>4</span>
+      <span class="vida">4</span>
     </div>
     <div class="pregunta-juego2">
         <p>Organiza la estructura de un documento HTML5</p>
     </div>
     <div class="respuesta-juego2">
       <div class="solucion">
-        
+
       </div>
       <div class="opciones">
         <input id="opcion1"class="botoncito" type="button" name="1"value="<!DOCTYPE html>">
@@ -31,18 +31,20 @@
         <input class="botoncito" type="button" name="2"value="<html>">
         <input class="botoncito" type="button" name="5"value="</html>">
       </div>
+
       <button id="btn-comprobar2"class="btn-comprobar" value=''> COMPROBAR</button>
-    </div>  
+
+      <div class="modal-verde2">
+        <p>¡¡Buen Trabajo!!</p>
+        <a href="#" id="btn-verde2">CONTINUAR</a>
+      </div>
+      <div class="modal-rojo2">
+        <p id="respuesta-ok2">Respuesta Incorrecta</p>
+        <a href="#" id="btn-rojo2">CONTINUAR</a>
+      </div>
+    </div>
   </div>
-  <div class="modal-verde2">
-    <p>¡¡Buen Trabajo!!</p>
-    <a href="#" id="btn-verde2">CONTINUAR</a>
-  </div>
-  <div class="modal-rojo2">
-    <p id="respuesta-ok2">Respuesta Incorrecta</p>
-    <a href="#" id="btn-rojo2">CONTINUAR</a>
-  </div>
-  
-  <script type="module" src="../components/juego2.js"></script>
+
+  <script type="module" src="../components/juego2/index.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2? family = Baloo + Tammudu + 2: wght @ 400; 700 & display = swap");
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&display=swap');
 /* Global */
 /* Reset */
 html {
@@ -566,6 +566,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+    z-index: 1;
 }
 
 .container-juego .modal-verde p {
@@ -847,7 +848,6 @@ body {
 .container-juego .respuesta-juego3 .pregunta-seleccion {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: 150px 150px;
       grid-template-rows: 150px 150px;
@@ -922,8 +922,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  -webkit-transition: ease .5s all;
-  transition: ease .5s all;
+    z-index: 1;
 }
 
 .modal-verde3 p {
@@ -966,8 +965,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  -webkit-transition: ease .5s all;
-  transition: ease .5s all;
+    z-index: 1;
 }
 
 .modal-rojo3 p {
