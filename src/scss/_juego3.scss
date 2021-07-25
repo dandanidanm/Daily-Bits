@@ -1,5 +1,5 @@
 .container-juego{
-
+  
   .pregunta-juego3{
     display: flex;
     align-items: center;
@@ -14,14 +14,20 @@
   }
 
   .respuesta-juego3{
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    .pregunta-seleccion{
+      display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 160px 160px 100px;
+    grid-template-rows: 150px 150px;
     justify-items: center;
     align-items: center;
     margin-top: 2rem;
     grid-row-gap: 1rem;
-    
+    }
     label{
       border: 2px solid gray;
       border-radius: 15px;
@@ -34,14 +40,99 @@
       justify-content: center;
       
     }
-    .btn-comprobar{
+    input{
+      display: none;
+
+      &:checked + label{
+        box-shadow: 0 0 0 3px orange;
+      }
+    }
+    
+    .btn-comprobar3{
       width: 90%;
       background-color:#D4CAF3;
       color: $text-color;
       padding: 1rem 0;
       border-radius: 20px;
-      margin: auto;
-      grid-column: -1/1;
+      margin: 1.5rem auto;
     }
   }  
+}
+/* modal para comprobar si esta bien o mal */
+
+.modal-verde3{
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ACFFCF;
+  position: absolute;
+  width: 100%;
+  top: 70%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition:ease .5s all;
+
+
+  p{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  a{
+    background-color: #2CB67D;
+    padding: 1rem 0;
+    border-radius: 20px;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    text-decoration: none;
+    color: $text-color;
+    font-size: 1rem;
+  }
+}
+.modal-rojo3{
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F9CFD7;
+  position: absolute;
+  width: 100%;
+  top: 70%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition:ease .5s all;
+  p{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #EF4565;
+  }
+  a{
+    background-color: #EF4565;
+    padding: 1rem 0;
+    border-radius: 20px;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    text-decoration: none;
+    color: $text-color;
+    font-size: 1rem;
+  }
+}
+
+/* display none */
+.display{
+  display: flex;
+}
+
+/* clases para el modal */
+.opacity{
+  opacity: 1;
+  pointer-events: visible;
 }

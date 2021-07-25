@@ -15,7 +15,7 @@
       </a>
       <progress value="90" min="0" max="100"></progress>
       <img src="../assets/corazon.png" alt="">
-      <span>4</span>
+      <span class="vida">4</span>
     </div>
     <!-- Pregunta uno -->
     <div class="container-pregunta1 display" id="container-p1">
@@ -27,16 +27,19 @@
       </div>
       <div class="respuesta-juego1">
         <form action="" id="form">
-          <label for="main">Main   
+          <label class="label1" for="main">Main
             <input class="radio-juego"  type="radio" name="html" id="main" value="main">
+            <img class="bonita"src="../assets/bien.png" alt="">
           </label>
-          <label for="section">Section
+          <label class="label1" for="section">Section
             <input class="radio-juego" type="radio" name="html" id="section" value="section">
+            <img class="bonita"src="../assets/bien.png" alt="">
           </label>
-          <label for="header">Header
+          <label class="label1" for="header">Header
             <input class="radio-juego" type="radio" name="html" id="header" value="header">
+            <img class="bonita"src="../assets/bien.png" alt="">
           </label>
-          <button value="" id="btn-juego1"class="btn-comprobar" >COMPROBAR</button>
+          <button value="" id="btn-juego1"class="btn-comprobar" disabled>COMPROBAR</button>
         </form>
       </div>  
     </div>
@@ -45,7 +48,7 @@
       <a href="#" id="btn-verde">CONTINUAR</a>
     </div>
     <div class="modal-rojo">
-      <p>Respuesta Incorrecta</p>
+      <p id="respuesta-ok">Respuesta Incorrecta</p>
       <a href="#" id="btn-rojo">CONTINUAR</a>
     </div>
     <!-- Pregunta dos -->
@@ -60,16 +63,19 @@
         <form action="">
           <label for="br">br  
             <input class="radio-juego"  type="radio" name="html" id="br" value="br">
+            <img class="bonita"src="../assets/bien.png" alt="">
           </label>
           <label for="script">script
             <input class="radio-juego" type="radio" name="html" id="script" value="script">
+            <img class="bonita"src="../assets/bien.png" alt="">
           </label>
           <label for="styles">styles
             <input class="radio-juego" type="radio" name="html" id="styles" value="styles">
+            <img class="bonita"src="../assets/bien.png" alt="">
           </label>
         </form>
       </div>  
-      <button class="btn-comprobar" id="btn-juego2">COMPROBAR</button>
+      <button class="btn-comprobar" id="btn-juego2" disabled>COMPROBAR</button>
     </div>
    <!--  <div class="modal-verde">
       <p>¡¡Buen Trabajo!!</p>
@@ -91,16 +97,19 @@
         <form action="">
           <label for="Dont-repeat-yellow">Don’t repeat yellow   
             <input class="radio-juego"  type="radio" name="html" id="Dont-repeat-yellow" value="Dont-repeat-yellow">
+            <img class="bonita"src="../assets/bien.png" alt="">
           </label>
           <label for="Dont-repeat-yourself">Don’t repeat yourself
             <input class="radio-juego" type="radio" name="html" id="Dont-repeat-yourself" value="Dontrepeatyourself">
+            <img class="bonita"src="../assets/bien.png" alt="">
           </label>
           <label for="Dont-recicle-year">Don’t recicle year
             <input class="radio-juego" type="radio" name="html" id="Dont-recicle-year" value="Dont-recicle-year">
+            <img class="bonita"src="../assets/bien.png" alt="">
           </label>
         </form>
       </div>  
-      <button id="btn-juego3" class="btn-comprobar">COMPROBAR</button>
+      <button id="btn-juego3" class="btn-comprobar" disabled>COMPROBAR</button>
     </div>
     <!-- <div class="modal-verde">
       <p>¡¡Buen Trabajo!!</p>
@@ -111,7 +120,7 @@
       <a href="#" class="btn-rojo">CONTINUAR</a>
     </div> -->
   </div>
-  <script type="module" src="../components/index.js"></script>
-
+  <script type="module" src="../components/juego1/index.js"></script>
+  
 </body>
 </html>

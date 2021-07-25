@@ -20,18 +20,22 @@
     align-items: center;
 
     .solucion{
+      text-align: center;
       margin: auto;
-      width: 90%;
-      height: 180px;
-      margin-top: -2rem;
-      hr{
-        margin: auto;
-        width: 100%;
-      }
+      width: 100%;
+      height: 150px;
+      margin-top: -1rem;
+      
     }
     .opciones{
-      
+      text-align: center;
+      height: 120px;
+      /* deshabilitar boton */
+      .deshabilitado{
+        display: none;
+      }
       input{
+        cursor: pointer;
         color: #ef4565;
         background-color: transparent;
         padding: .5rem;
@@ -50,5 +54,81 @@
       margin: auto;
       margin-top: 3rem;
     }
-  }  
+  }
 }
+/* modal para comprobar si esta bien o mal */
+
+.modal-verde2{
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ACFFCF;
+  position: absolute;
+  width: 100%;
+  top: 70%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  p{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  a{
+    background-color: #2CB67D;
+    padding: 1rem 0;
+    border-radius: 20px;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    text-decoration: none;
+    color: $text-color;
+    font-size: 1rem;
+  }
+}
+.modal-rojo2{
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F9CFD7;
+  position: absolute;
+  width: 100%;
+  top: 70%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  p{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #EF4565;
+  }
+  a{
+    background-color: #EF4565;
+    padding: 1rem 0;
+    border-radius: 20px;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    text-decoration: none;
+    color: $text-color;
+    font-size: 1rem;
+  }
+}
+
+/* display none */
+.display{
+  display: flex;
+}
+
+/* clases para el modal */
+.opacity{
+  opacity: 1;
+  pointer-events: visible;
+}  

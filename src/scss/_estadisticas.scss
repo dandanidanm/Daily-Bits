@@ -1,0 +1,50 @@
+.home-container{
+  height: 100vh;
+  h2{
+    text-align: left;
+    color: #fff;
+    margin-left: 2rem;
+    padding-top: 1rem;
+    
+  }
+  .tiempo-jugando{
+    font-size: 1rem;
+    margin-left: 2rem;
+    background-color: transparent;
+    border: none;
+    color: $text-color;
+  }
+
+  .resultado{
+    margin: 2rem;
+
+    .resultado-estadistica{
+      margin: 1rem 0;
+      padding: 1rem 0;
+      border: 1px solid #fff;
+      border-radius: 10px;
+      
+      figure{
+
+        img{
+          margin-left: 1rem;
+          margin-right: .5rem;
+        }
+
+        figcaption{
+          color: #fff;
+        }
+      }
+      p{
+        margin-right: 1rem;
+        color: #fff;
+      }
+    }
+    .container-flex{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+}  

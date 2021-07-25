@@ -1,0 +1,32 @@
+.home-container{
+  
+  .perfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+
+    h3{
+      color: $text-color;
+    }
+    h4{
+      color: $text-color;
+    }
+    a{
+      margin-top: 2rem;
+      padding: 1rem;
+      font-size: 1rem;
+      color: #EF4565;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  
+
+}  
