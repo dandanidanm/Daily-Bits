@@ -1,19 +1,22 @@
 .home-container{
   background-color: #16161A;
   height: 100%;
+  max-height: 640px;
+  max-width: 360px;
   padding-bottom: 2rem;
+  position: relative;
+  
   .header-container{
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 5;
-    height: $max-height;
     background-color:#232E35;
-   
+    
     .menu{
       @include containerFlex(space-between,center,nowrap);
-
+      
       a{
         color: $text-color;
         text-decoration: none;

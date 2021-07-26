@@ -64,7 +64,10 @@ export const pintando = () =>{
         $pizzarra.innerHTML = $pizzarra.innerHTML + '<input class="prueba" name= "5"style="cursor:pointer;color:#ef4565;background-color:transparent;padding:.5rem;border:2px solid #fff;border-radius:15px;font-size:1.1rem;margin:.5rem;class="botoncito1" type="button" value="</html>"> '
         $botoncito[i].classList.toggle('deshabilitado');
       }
-
+      if(pizarron.length === 5){
+        $btnComprobar.disabled = false;
+        $btnComprobar.style.background="#6B47DC";
+      }
     const $botoncito1 = document.querySelectorAll('.prueba');
     const btn1 = Array.from($botoncito1);
     const borrando = ()=>{
@@ -91,11 +94,12 @@ export const pintando = () =>{
       }
     }
     borrando()
-
-    });
-
-  }
+    
+  });
+  
 }
+}
+
 
 export const comprobacion = () =>{
   //igualando los array
@@ -103,6 +107,8 @@ export const comprobacion = () =>{
     e.preventDefault();
     if(JSON.stringify(resultadoTrue) === JSON.stringify(pizarron)){
       $btnComprobar.style.display = 'none'
+      //valorando el progreso
+      $progress.value= $progress.value + 20;
       modalGood2.classList.add('opacity');
       modalGood2.innerHTML = '<p style="margin-top:1rem;text-align:center;font-size:1rem">BUEN TRABAJO!!</p><p>FIN DEL JUEGO</p><div style="display:flex;justify-content:space-between;margin-bottom:1rem;width:100%"><a href="home.html" style="color:#fff;background-color:#EF4565;padding:1rem;border-radius:15px;text-decoration:none;margin-top:1rem;width:100px;">Home</a><a href="juego3.html" style="color:#fff;background-color:#2CB67D;padding:1rem;border-radius:15px;text-decoration:none;margin-top:1rem;width:100px;">Siguiente</a></div>';
     }else{

@@ -24,6 +24,8 @@ const preguntaTres = document.getElementById('container-p3');
 //parrafo del modal con solucion
 const ok = document.getElementById('respuesta-ok');
 
+const $progress = document.querySelector('.progress');
+
 const vidas = document.querySelector('.vida');
 
 const restarVida = () => {
@@ -55,12 +57,17 @@ export const checkLocalData = () => {
 export const res = () => {
   for(let i = 0; i < respuesta1.length; i++){
     respuesta1[i].addEventListener('click',()=>{
-
-      btnComprobar.value = respuesta1[i].value;
+        
+        
+      btnComprobar.value = respuesta1[i].value
       btnComprobar.disabled = false;
+      btnComprobar.style.background="#6B47DC";
+          
 
       btnComprobar2.value = respuesta1[i].value;
       btnComprobar2.disabled = false;
+  
+
 
       btnComprobar3.value = respuesta1[i].value;
       btnComprobar3.disabled = false;
@@ -72,6 +79,8 @@ export const res = () => {
     e.preventDefault();
     if(btnComprobar.value === 'main'){
       modalGood.classList.add('opacity');
+      //valorando el progreso
+      $progress.value= $progress.value + 20;
     }else{
       restarVida();
       modalBad.classList.add('opacity');
@@ -83,6 +92,8 @@ export const res = () => {
     e.preventDefault();
     if(btnComprobar2.value === 'script'){
       modalGood.classList.add('opacity');
+      //valorando el progreso
+      $progress.value= $progress.value + 20;
     }else{
       restarVida();
       modalBad.classList.add('opacity');
@@ -95,6 +106,8 @@ export const res = () => {
 
     if(btnComprobar3.value === 'Dontrepeatyourself'){
       modalGood.classList.add('opacity');
+      //valorando el progreso
+      $progress.value= $progress.value + 20;
     }else{
       restarVida();
       modalBad.classList.add('opacity');

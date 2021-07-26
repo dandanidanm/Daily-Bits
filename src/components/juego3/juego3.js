@@ -5,7 +5,7 @@ const $btnComprobar = document.querySelector('.btn-comprobar3');
 const radioRespuesta = document.querySelectorAll('.r-radio');
 const $modalGood3 = document.querySelector('.modal-verde3'),
       $modalBad3 = document.querySelector('.modal-rojo3');
-const $progress3 = document.querySelector('.progress3');
+const $progress = document.querySelector('.progress');
 const $vida = document.querySelector('.vida');
 
 const restarVida = () => {
@@ -56,7 +56,8 @@ export const solucion = ()=>{
       $modalGood3.classList.add('opacity');
 
       //valorando el progreso
-      $progress3.value= 100;
+      $progress.value= $progress.value + 20;
+
       $btnComprobar.style.display = 'none'
     }else{
       //descontando vida

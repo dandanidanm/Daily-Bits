@@ -1,6 +1,6 @@
 .container-juego{
   background-color: #16161A;
-  height: 100vh;
+  height: 100%;
   position: relative;
 
   .progress-bar{
@@ -98,8 +98,8 @@
       color: $text-color;
       padding: 1rem 0;
       border-radius: 20px;
-      margin: auto;
-      margin-top: 3rem;
+      margin: 3rem auto;
+      
     }
   }
 
@@ -170,8 +170,8 @@
       color: $text-color;
       padding: 1rem 0;
       border-radius: 20px;
-      margin: auto;
-      margin-top: 3rem;
+      margin: 3rem auto;
+
     }
   }
   .container-pregunta3{/* *********************** */
@@ -241,8 +241,8 @@
       color: $text-color;
       padding: 1rem 0;
       border-radius: 20px;
-      margin: auto;
-      margin-top: 3rem;
+      margin: 3rem auto;
+
     }
   }
   
@@ -263,6 +263,7 @@
       bottom: 0;
       left: 0;
       right: 0;
+      z-index: 1;
 
       p{
         font-size: 1.5rem;
@@ -294,6 +295,7 @@
       bottom: 0;
       left: 0;
       right: 0;
+      z-index: 1;
 
       p{
         font-size: 1.5rem;
